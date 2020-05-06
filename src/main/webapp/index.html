@@ -1,14 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Log ind</title>
+
+    <!-- Henter Font fra Google's Font API
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" > -->
+    <!-- Linker vores stylesheet -->
+    <link rel="stylesheet" type="text/css" href="default.css">
 </head>
 <body>
-<h2>Hello World!</h2>
 
-<div id="outputDiv"></div>
-<input id ="testbutton" type="button" value="Test api call">
-<input id ="testjsonbutton" type="button" value="Test json api call">
-<input id ="testmysqlbutton" type="button" value="Test mysql api call">
-<input id ="mysqlbutton" type="button" value="mysql api call">
+    <h1>CDIO 2</h1>
+
+    <form action="brugeroversigt.html">
+        <input type="text" name="username" placeholder="Username"><br>
+        <input id="psw" type="password" name="passwd" placeholder="Password"><br>
+        <input type="submit" class="hvr-buzz" value="Sign in">
+    </form>
+
+    <!-- Logo med style defineret direkte i HTML -->
+    <img id="logo" src="dtu_logo.png" style="margin-top: 2%" width="50" height="72.5">
+
 </body>
 </html>

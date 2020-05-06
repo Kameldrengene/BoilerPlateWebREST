@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret bruger</title>
+
+    <!-- Henter Font fra Google's Font API
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" > -->
+
+    <!-- Linker vores stylesheet -->
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="opretbruger.css">
+</head>
+<body>
+
+    <h1>Opret ny bruger</h1>
+<br>
+
+    <form action="brugeroversigt.html">
+
+        <input type="text" placeholder="Brugernavn"><br>
+        <input type="text" placeholder="Fornavn"><br>
+        <input type="text" placeholder="Efternavn"><br>
+
+        <!-- En <div> (gruppe) der indeholder en serie labels og 'radio'-knapper -->
+        <div class="roller">
+            <!-- Kun én knap af dem med "name=gender" kan vælges -->
+            <label id="subject">Vælg rolle:</label><br>
+            <input type="checkbox" id="rolle1" name="Admin" value="Admin">
+            <label for="rolle1"> Administrator </label><br>
+            <input type="checkbox" id="rolle2" name="Pharma" value="Pharma">
+            <label for="rolle2"> Pharmaceut</label><br>
+            <input type="checkbox" id="rolle3" name="Prod" value="Prod">
+            <label for="rolle3"> Produktionsleder</label><br>
+            <input type="checkbox" id="rolle4" name="Labo" value="Labo">
+            <label for="rolle4"> Laborant</label><br><br>
+            <input type="submit" class="hvr-pop" value="Opret">
+        </div>
+
+    </form>
+
+</body>
+</html>
