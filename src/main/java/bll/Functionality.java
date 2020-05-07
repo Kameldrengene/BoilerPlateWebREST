@@ -23,7 +23,7 @@ public class Functionality implements IFunctionality {
         
         int[] IDs = new int[users.size()];
         for (int i = 0; i < users.size(); i++) {
-            IDs[i] = users.get(i).getUserId();
+            IDs[i] = users.get(i).getUserID();
         }
         return IDs;
     }
@@ -79,7 +79,7 @@ public class Functionality implements IFunctionality {
             }
         }
 
-        if (pass.contains(Integer.toString(user.getUserId())) || nameInPass) {
+        if (pass.contains(Integer.toString(user.getUserID())) || nameInPass) {
             throw new Exception("Information in password error");
         }
         
