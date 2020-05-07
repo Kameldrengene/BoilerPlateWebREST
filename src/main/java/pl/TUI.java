@@ -152,7 +152,7 @@ public class TUI implements IUI {
 
         addRolesToUser(newuser);
 
-        newuser.setUserId(id+1);
+        newuser.setUserID(id+1);
 
         System.out.println("¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤");
         System.out.println("¤ Brugeren er oprettet ¤");

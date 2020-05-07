@@ -26,17 +26,17 @@ public class UserDAONonPersistent implements IUserDAO {
 
     @Override
     public void createUser(UserDTO user) throws DALException {
-        if (data.getUsers().containsKey(user.getUserId())){
+        if (data.getUsers().containsKey(user.getUserID())){
             throw new DALException("Bruger navn er optaget");
         }
         else
-            data.getUsers().put(user.getUserId(),user);
+            data.getUsers().put(user.getUserID(),user);
     }
 
     @Override
     public void updateUser(UserDTO user) throws DALException {
-        if (data.getUsers().containsKey(user.getUserId()))
-        data.getUsers().replace(user.getUserId(),user);
+        if (data.getUsers().containsKey(user.getUserID()))
+        data.getUsers().replace(user.getUserID(),user);
         else
             throw new DALException("Brugeren eksistet ikke");
     }

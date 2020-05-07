@@ -10,6 +10,7 @@
 
     <!-- Tilføjer ekstra stylesheet til dennne her side. Bemærk: rækkefølgen er vigtig -->
     <link rel="stylesheet" type="text/css" href="brugeroversigt.css">
+
 </head>
 <body>
 
@@ -19,133 +20,7 @@
     <form action="opretbruger.html">
         <input type="submit" class="hvr-pop" value="Opret Ny Bruger">
     </form>
-
-    <!-- Statisk tabel over brugere -->
-    <!-- Vi fjerner cellpadding og spacing, og laver det i CSS i stedet -->
-    <table class="brugertable" cellpadding="0" cellspacing="0">
-        <tr>
-            <th>Bruger ID</th>
-            <th>Brugernavn</th>
-            <th>Rolle</th>
-            <th>Fornavn</th>
-            <th>Efternavn</th>
-            <th>Vej</th>
-            <th>Vejnummer</th>
-            <th>Postnummer</th>
-            <th>By</th>
-            <th></th> <!-- Ekstra tom celle, så de matcher tabelstørrelsen-->
-        </tr>
-
-        <!-- Bruger 1 -->
-        <tr>
-            <td>1</td>
-            <td>MIK</td>
-            <td>Admin</td>
-            <td>Mikkel</td>
-            <td>Danielsen</td>
-            <td>En vej</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>Etstediverdenen</td>
-
-            <!-- Vi kan tilføje andre elementer inde i en celle -->
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-
-        <!-- Bruger 1 -->
-        <tr>
-            <td>2</td>
-            <td>VOL</td>
-            <td>Admin</td>
-            <td>Volkan</td>
-            <td>Isik</td>
-            <td>En anden vej</td>
-            <td>45</td>
-            <td>4000</td>
-            <td>En Anden By</td>
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>FRE</td>
-            <td>Admin</td>
-            <td>Frederik</td>
-            <td>Koefoed</td>
-            <td>En vej</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>Etstediverdenen</td>
-
-            <!-- Vi kan tilføje andre elementer inde i en celle -->
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>TAL</td>
-            <td>Admin</td>
-            <td>Mohammad</td>
-            <td>Talha</td>
-            <td>En vej</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>Etstediverdenen</td>
-
-            <!-- Vi kan tilføje andre elementer inde i en celle -->
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>LAS</td>
-            <td>Admin</td>
-            <td>Lasse</td>
-            <td>Strunge</td>
-            <td>En vej</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>Etstediverdenen</td>
-
-            <!-- Vi kan tilføje andre elementer inde i en celle -->
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>MAR</td>
-            <td>Admin</td>
-            <td>Mark</td>
-            <td>Mortensen</td>
-            <td>En vej</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>Etstediverdenen</td>
-
-            <!-- Vi kan tilføje andre elementer inde i en celle -->
-            <td>
-                <form action="opretbruger.html">
-                    <input type="submit" class="slet" value="Slet">
-                </form>
-            </td>
-        </tr>
-    </table>
-
+    <p id="userList"></p>
+    <script src="users.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+import dal.IUserDAO;
+import dal.UserDAOSQL;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -39,6 +42,7 @@ public class WebService {
 
     }
 
+
     @Path("mysql_databases/{i}")
     @GET
     public String getDatabases(@PathParam("i") int i) throws SQLException {
@@ -52,5 +56,20 @@ public class WebService {
         return resultSet.getString(1);
 
     }
+    @Path("mysql_json")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public UserDAOSQL getData() throws IUserDAO.DALException {
+        return new UserDAOSQL();
+    }
+
+    @Path("mysql_json/deleteUser/{i}")
+    @GET
+    public String removeUser(@PathParam("i") int i) throws IUserDAO.DALException {
+        UserDAOSQL db = new UserDAOSQL();
+        db.deleteUser(i);
+        return "User: "+i+" deleted";
+    }
+
 
 }
