@@ -1,7 +1,7 @@
 async function deleteUser(ID) {
     console.log("Delete user:" + ID);
     if(confirm("Do you sure you want to delete user: "+ID+"?")){
-        const response = await fetch("/BoilerPlate_war_exploded/rest/live/mysql_json/deleteUser/"+ID);
+        await fetch("/BoilerPlate_war_exploded/rest/live/mysql_json/deleteUser/"+ID);
         loadUserTable();
     }
 }
@@ -58,6 +58,10 @@ function createTD(content) {
     return th;
 }
 
+loadUserTable();
+
+setInterval(loadUserTable, 3000);
+
 async function loadUserTable() {
     const response = await fetch("/BoilerPlate_war_exploded/rest/live/mysql_json");
     const json = await response.json();
@@ -73,5 +77,3 @@ async function loadUserTable() {
     document.getElementById("userList").innerHTML = "";
     document.getElementById("userList").appendChild(table);
 }
-
-loadUserTable();
