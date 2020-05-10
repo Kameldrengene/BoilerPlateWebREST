@@ -1,6 +1,5 @@
 async function updateUser() {
-    //const updateID = await fetch("/BoilerPlate_war_exploded/rest/live/update");
-    const updateID = 12 //TODO: FIX for update number find
+    var updateID = localStorage.getItem("userID"); //TODO: FIX for update number find
     var user = {
         username: document.getElementById("usernameU").value,
         ini: document.getElementById("iniU").value,
@@ -18,13 +17,8 @@ async function updateUser() {
     if (user.username != "" && user.ini != "" && user.cpr != "" && user.pass != "" && nrOfRoles != 0) {
         if (confirm("Are you sure you want to update user?")) {
             var response = await fetch("/BoilerPlate_war_exploded/rest/live/mysql_json/updateUser/" + updateID + "/" + user.username + "/" + user.ini + "/" + user.cpr + "/" + user.pass + "/" + user.roles[0] + "/" + user.roles[1] + "/" + user.roles[2] + "/" + user.roles[3]);
-            console.log(JSON.stringify(user));
-            console.log(response.text());
             location.href = "brugeroversigt.html";
-            //load_users();
         }
-        console.log(JSON.stringify(user));
-        console.log(response.text());
     } else if(nrOfRoles > 0){
         alert("Please fill out all columns");
     } else {

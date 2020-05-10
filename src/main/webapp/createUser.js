@@ -22,7 +22,6 @@ async function createUser() {
             //load_users();
         }
         console.log(JSON.stringify(user));
-        console.log(response.text());
     } else if(nrOfRoles > 0){
         alert("Please fill out all columns");
     } else {

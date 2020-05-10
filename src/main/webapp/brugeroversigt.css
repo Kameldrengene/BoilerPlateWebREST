@@ -1,5 +1,5 @@
-
-/* Vi vil ikke have at teksten er centreret i tabellen */
+/*Stærk inspireret af Malte's løsning i for html og css
+ Vi vil ikke have at teksten er centreret i tabellen */
 .brugertable {
     /* Auto margin i højre og venstre side (her alle), gør
         elementet bliver centreret på skærmen. */
