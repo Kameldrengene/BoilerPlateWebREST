@@ -12,9 +12,6 @@ async function fetchUser() {
         }
     }
 
-    console.log(foundUser)
-
-
     document.getElementById("usernameU").value = foundUser.userName;
     document.getElementById("iniU").value =  foundUser.ini;
     document.getElementById("cprU").value =  foundUser.cpr;
