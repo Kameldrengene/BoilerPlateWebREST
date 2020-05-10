@@ -2,10 +2,7 @@ import dal.IUserDAO;
 import dal.UserDAOSQL;
 import dto.UserDTO;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -112,5 +109,22 @@ public class WebService {
         System.out.println(user.toString());
         return user.toString();
     }
+    /*@Path("mysql_json/createUser")
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String createUser(UserDTO user) {
+        UserDAOSQL db = new UserDAOSQL();
+
+        try {
+            List<UserDTO> data = db.getData();
+            user.setUserID(data.get(data.size()-1).getUserID()+1);
+            db.createUser(user);
+        } catch (IUserDAO.DALException e) {
+            e.printStackTrace();
+        }
+        System.out.println(user.toString());
+        return user.toString();
+    }*/
+
 
 }
