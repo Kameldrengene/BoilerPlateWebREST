@@ -1,6 +1,6 @@
 import dal.IUserDAO;
 import dal.UserDAOSQL;
-import dto.UserDTO;
+import dal.dto.UserDTO;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
