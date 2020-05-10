@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log ind</title>
+    <title>CDIO2</title>
 
     <!-- Henter Font fra Google's Font API
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" > -->
@@ -11,16 +11,17 @@
 </head>
 <body>
 
-    <h1>CDIO 2</h1>
-
-    <form action="brugeroversigt.html">
+<h1>CDIO 2</h1>
+<div id="content">
+    <form action="/" onSubmit="load_users(this); return false;">
         <input type="text" name="username" placeholder="Username"><br>
         <input id="psw" type="password" name="passwd" placeholder="Password"><br>
         <input type="submit" class="hvr-buzz" value="Sign in">
     </form>
 
     <!-- Logo med style defineret direkte i HTML -->
-    <img id="logo" src="dtu_logo.png" style="margin-top: 2%" width="50" height="72.5">
+    <img id="logo" src="dtu_logo.png" style="margin-top: 2%" width="50" height="72.5"></div>
 
+<script src="login.js"></script>
 </body>
 </html>

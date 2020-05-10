@@ -17,6 +17,7 @@ async function createUser() {
             console.log(JSON.stringify(user));
             console.log(response.text());
             location.href = "brugeroversigt.html";
+            //load_users();
         }
         console.log(JSON.stringify(user));
         console.log(response.text());
@@ -24,4 +25,7 @@ async function createUser() {
         alert("Please fill out all columns");
 }
 
+function load_users(){
+    document.getElementById("content").innerHTML='<object type="text/html" data="brugeroversigt.html" ></object>';
+}
 
