@@ -1,6 +1,9 @@
+package controller;
+
 import dal.IUserDAO;
+import dal.MySQLConnector;
 import dal.UserDAOSQL;
-import dto.UserDTO;
+import dal.dto.UserDTO;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -17,7 +20,7 @@ public class WebService {
     @Path("hello")
     @GET
     public String getTest() {
-        return "Hello World";
+        return "controller.Hello World";
     }
 
     @Path("json")

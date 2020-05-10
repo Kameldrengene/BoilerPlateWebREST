@@ -1,5 +1,7 @@
+package controller;
+
 public class Hello {
-    private String text = "Hello JSON-world";
+    private String text = "controller.Hello JSON-world";
 
     //Names MUST match property name for serialization to work!
     public String getText() {
