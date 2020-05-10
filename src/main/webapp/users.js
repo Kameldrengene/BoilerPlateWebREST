@@ -6,6 +6,13 @@ async function deleteUser(ID) {
     }
 }
 
+async function updateUser(ID) {
+    console.log("Update user:" + ID);
+    await fetch("/BoilerPlate_war_exploded/rest/live/update/"+ID); //TODO: FIX for update number find
+    location.href = "updatebruger.html";
+}
+
+
 function create_attributes() {
     const tr = document.createElement("tr");
     tr.appendChild(createTD("Bruger ID"));
@@ -35,6 +42,14 @@ function create_row(user) {
     removeButton.value = "slet";
     removeButton.addEventListener("click", () => deleteUser(user.userID), false);
 
+    const updateButton = document.createElement("input");
+    updateButton.id = "updateuser";
+    updateButton.className = "update";
+    updateButton.type = "button";
+    updateButton.value = "update";
+    updateButton.addEventListener("click", () => updateUser(user.userID), false);
+
+    tr.appendChild(createCell(updateButton));
     tr.appendChild(createCell(removeButton));
 
     return tr;

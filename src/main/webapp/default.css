@@ -154,7 +154,7 @@ input[type=text]:focus, input[type=password]:focus {
         transform: scale(1.2);
     }
 }
-.hvr-pop,.slet {
+.hvr-pop,.slet, .update {
     color: var(--col-background);
     font-weight: bold;
     background-color: var(--color-primary);
@@ -173,7 +173,7 @@ input[type=text]:focus, input[type=password]:focus {
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.hvr-pop:hover, .slet:hover, .hvr-pop:focus , .slet:focus, .hvr-pop:active , .slet:active {
+.hvr-pop:hover, .slet:hover, .update:hover,  .hvr-pop:focus , .slet:focus, .update:focus, .hvr-pop:active , .slet:active, .update:active {
     -webkit-animation-name: hvr-pop;
     animation-name: hvr-pop;
     -webkit-animation-duration: 0.3s;
