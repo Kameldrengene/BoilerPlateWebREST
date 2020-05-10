@@ -7,8 +7,7 @@ async function deleteUser(ID) {
 }
 
 async function updateUser(ID) {
-    console.log("Update user:" + ID);
-    await fetch("/BoilerPlate_war_exploded/rest/live/update/"+ID); //TODO: FIX for update number find
+    localStorage.setItem("userID",ID);
     location.href = "updatebruger.html";
 }
 

@@ -3,7 +3,7 @@ async function fetchUser() {
     const json = await response.json();
     var foundUser;
     //const updateID = await fetch("/BoilerPlate_war_exploded/rest/live/update");
-    const updateID = 12 //TODO: FIX for update number find
+    var updateID = localStorage.getItem("userID"); //TODO: FIX for update number find
 
     for (const testUser of json.data) {
         if (testUser.userID == updateID) {

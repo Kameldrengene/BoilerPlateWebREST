@@ -12,7 +12,6 @@ import java.util.List;
 
 @Path("live")
 public class WebService {
-    int ID = 0;
     MySQLConnector conn = MySQLConnector.getInstance();
 
     @Path("hello")
@@ -69,20 +68,6 @@ public class WebService {
         UserDAOSQL db = new UserDAOSQL();
         db.deleteUser(i);
         return "User: " + i + " deleted";
-    }
-
-    @Path("update/{ID}")
-    @GET
-    public String setUpdate(@PathParam("ID") int id) {
-        ID = id;
-        return "set Id to " + ID;
-    }
-
-    @Path("update")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public int getID() {
-        return ID;
     }
 
 

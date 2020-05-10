@@ -1,6 +1,6 @@
 async function updateUser() {
     //const updateID = await fetch("/BoilerPlate_war_exploded/rest/live/update");
-    const updateID = 12 //TODO: FIX for update number find
+    var updateID = localStorage.getItem("userID"); //TODO: FIX for update number find
     var user = {
         username: document.getElementById("usernameU").value,
         ini: document.getElementById("iniU").value,
@@ -24,7 +24,6 @@ async function updateUser() {
             //load_users();
         }
         console.log(JSON.stringify(user));
-        console.log(response.text());
     } else if(nrOfRoles > 0){
         alert("Please fill out all columns");
     } else {
