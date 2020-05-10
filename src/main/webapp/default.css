@@ -1,4 +1,4 @@
-
+/*Stærk inspireret af Malte's løsning i for html og css */
 /* Du kan også bruge :root selector */
 * {
     /* Definerer en global variabel til vores "temafarve" */
@@ -85,7 +85,7 @@ input[type=text]:focus, input[type=password]:focus {
     sat til 'submit'.
  */
 
-/* Buzz */
+/* Buzz---https://ianlunn.github.io/Hover/ */
 @-webkit-keyframes hvr-buzz {
     50% {
         -webkit-transform: translateX(3px) rotate(2deg);
@@ -141,7 +141,7 @@ input[type=text]:focus, input[type=password]:focus {
     border: none;
 }
 
-/* Pop */
+/* Pop -----https://ianlunn.github.io/Hover/*/
 @-webkit-keyframes hvr-pop {
     50% {
         -webkit-transform: scale(1.2);
