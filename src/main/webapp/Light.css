@@ -187,10 +187,10 @@ input[type=text]:focus, input[type=password]:focus {
     border: none;
 }
 .slet{
-    background: #8d1d18;
+    background: #89312c;
 }
 .update{
-    background: #12418d;
+    background: #234d93;
 }
 
 #content object {
