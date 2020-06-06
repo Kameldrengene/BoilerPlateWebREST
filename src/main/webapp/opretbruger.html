@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" > -->
 
     <!-- Linker vores stylesheet -->
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" id="MainTheme" type="text/css" href="default.css">
     <link rel="stylesheet" type="text/css" href="opretbruger.css">
 </head>
 <body>
@@ -42,6 +42,17 @@
     </div>
 
     <script src="createUser.js"></script></div>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    var theme = localStorage.getItem('Theme');
+    var trufal = theme.startsWith('L',0);
+    console.log(trufal);
+    console.log(theme);
+    if (trufal) {
+        $("#MainTheme").replaceWith("<link rel=\"stylesheet\" id=\"mainTheme\" type=\"text/css\" href=\"Light.css\">");
+    }
+
+</script>
 
 </body>
 </html>
