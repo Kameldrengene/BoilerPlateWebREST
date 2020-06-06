@@ -48,9 +48,3 @@
 .brugertable a:hover {
     color: var(--col-textprimary);
 }
-.slet{
-    background: #c65450;
-}
-.update{
-    background: cornflowerblue;
-}
